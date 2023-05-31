@@ -14,7 +14,7 @@ print(URL)
 
 
 def trace(*args):
-  #print (*args)
+  print (*args)
   pass
 
 trace ("Calling", URL)
