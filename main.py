@@ -14,3 +14,20 @@ URL = URL + "amount=" + str(questions)
 print(URL)
 
 
+def trace(*args):
+  """Used for debug output"""
+  print (*args)  # Comment out this line to remove debug output
+  pass
+
+trace ("Calling", URL)
+response = requests.get(URL) # Get data from the URL
+response.raise_for_status()  # Throw an exception if the request failed
+data = response.json()       # Parse the response into JSON
+
+trace ("\nText returned:", response.text)
+
+trace ("\nHere are all the key/value pairs in the JSON response:")
+for key, value in data.items():
+  trace (key, ": ", value)
+
+
