@@ -10,24 +10,21 @@ print(URL)
 
 questions = input("How many questions do you want? \nChoose a number between 1 and 10: ")
 URL = URL + "amount=" + str(questions)
-
-print(URL)
+print(URL) 
 
 
 def trace(*args):
-  """Used for debug output"""
-  print (*args)  # Comment out this line to remove debug output
+  #print (*args)
   pass
 
 trace ("Calling", URL)
-response = requests.get(URL) # Get data from the URL
-response.raise_for_status()  # Throw an exception if the request failed
-data = response.json()       # Parse the response into JSON
+response = requests.get(URL)
+response.raise_for_status()
+data = response.json()
 
 trace ("\nText returned:", response.text)
 
 trace ("\nHere are all the key/value pairs in the JSON response:")
 for key, value in data.items():
   trace (key, ": ", value)
-
-
+  
