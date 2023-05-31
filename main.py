@@ -30,4 +30,5 @@ trace ("\nHere are all the key/value pairs in the JSON response:")
 for key, value in data.items():
   trace (key, ": ", value)
 
-
+for result in data["results"]:
+  guess = input(result["question"])
