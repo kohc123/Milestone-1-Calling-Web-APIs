@@ -11,7 +11,11 @@ print()
 questions = input("How many questions do you want? \nChoose a number between 1 and 10: ")
 URL = URL + "amount=" + str(questions)
 
-print() 
+print()
+print("Please answer the following questions with true or false.") 
+print("Note: &#039; should be replaced by an apostrophe")
+print("Note: &quot should be replaced by a quotation mark")
+print("&Aring; should be replaced by a letter A")
 print("_"*67)
 print()
 
